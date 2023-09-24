@@ -63,14 +63,21 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            ElevatedButton(
-                onPressed: _incrementCounter,
-                child: const Icon(Icons.add)
-            ),
-            ElevatedButton(
-                onPressed: _decrementCounter,
-                child: const Icon(Icons.remove)
-            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+
+              children: <Widget>[
+                ElevatedButton(
+                    onPressed: _incrementCounter,
+                    child: const Icon(Icons.add)
+                ),
+                SizedBox(width: 10),
+                ElevatedButton(
+                    onPressed: _decrementCounter,
+                    child: const Icon(Icons.remove)
+                ),
+              ],
+            )
           ],
         ),
       ),
