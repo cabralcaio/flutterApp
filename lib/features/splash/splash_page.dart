@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/common/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -11,16 +12,16 @@ class SplashPage extends StatelessWidget {
         alignment: Alignment.center,
         decoration: const BoxDecoration(
             gradient: LinearGradient(
-                colors: [Color(0xFF63B5AF), Color(0xFF438883)],
+                colors: AppColors.greenLinearGradient,
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)
         ),
-        child: const Text(
+        child:Text(
           "Monetary",
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 50,
               fontWeight: FontWeight.w700,
-              color: Color(0xFFFFFFFF)),
+          ).copyWith(color: AppColors.white),
         ),
       ),
     );
